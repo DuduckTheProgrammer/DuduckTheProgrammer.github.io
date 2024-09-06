@@ -84,12 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
             audio.play().then(() => {
                 prompt.style.display = 'none'; // Hide the prompt after interaction
                 document.removeEventListener('click', playAudio); // Remove event listener after playing
+                document.removeEventListener('touchstart', playAudio); // Remove touch event listener as well
             }).catch(function(error) {
                 console.log('Error playing audio: ' + error);
             });
         }
     };
 
-    // Listen for user interaction
+    // Listen for both click and touch events
     document.addEventListener('click', playAudio);
+    document.addEventListener('touchstart', playAudio);
 });

@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const sliders = [];
-
+    
     // Function to initialize sliders
     const initializeSliders = () => {
-        // Iterate through all sliders on the page
         document.querySelectorAll('.photo-slider').forEach((slider, index) => {
             sliders[index] = {
                 slideIndex: 0,
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 totalSlides: slider.querySelectorAll('.photo-slide').length
             };
 
-            // Function to show the current slide
             const showSlides = () => {
                 const sliderData = sliders[index];
                 sliderData.slides.forEach((slide, i) => {
@@ -19,10 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             };
 
-            // Initialize the first slide
             showSlides();
 
-            // Add event listeners for navigation buttons
             const prevButton = slider.querySelector('.prev');
             const nextButton = slider.querySelector('.next');
 
@@ -67,7 +63,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('background-music');
     const prompt = document.createElement('div');
     prompt.id = 'interaction-prompt';
-    prompt.innerHTML = '<p>Click anywhere to start the background music.</p>';
+    prompt.style.position = 'fixed';
+    prompt.style.top = '0';
+    prompt.style.left = '0';
+    prompt.style.width = '100%';
+    prompt.style.height = '100%';
+    prompt.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    prompt.style.color = '#fff';
+    prompt.style.display = 'flex';
+    prompt.style.alignItems = 'center';
+    prompt.style.justifyContent = 'center';
+    prompt.style.textAlign = 'center';
+    prompt.style.fontSize = '20px';
+    prompt.style.zIndex = '9999';
+    prompt.innerHTML = '<p>Tap anywhere to start the background music.</p>';
     document.body.appendChild(prompt);
 
     const playAudio = () => {

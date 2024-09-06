@@ -63,12 +63,22 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('show');  // Toggle the 'show' class to display or hide the links
     });
 
-    // Play music automatically
+    // Play music on user interaction
     const audio = document.getElementById('background-music');
+    const prompt = document.createElement('div');
+    prompt.id = 'interaction-prompt';
+    prompt.innerHTML = '<p>Click anywhere to start the background music.</p>';
+    document.body.appendChild(prompt);
 
-    if (audio) {
-        audio.play().catch(function(error) {
-            console.log('Error playing audio: ' + error);
-        });
-    }
+    const playAudio = () => {
+        if (audio) {
+            audio.play().catch(function(error) {
+                console.log('Error playing audio: ' + error);
+            });
+            prompt.style.display = 'none'; // Hide the prompt after interaction
+            document.removeEventListener('click', playAudio); // Remove event listener after playing
+        }
+    };
+
+    document.addEventListener('click', playAudio);
 });

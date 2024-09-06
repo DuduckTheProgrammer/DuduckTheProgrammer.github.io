@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keluarga Duduck</title>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <audio id="background-music" src="music/mp3_background.mp3" autoplay preload="auto" loop></audio>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Keluarga Duduck</a>
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+            <ul class="nav-links">
+                <li><a href="#section-1">Duduck's First Project</a></li>
+                <li><a href="#section-2">life Before Duduck</a></li>
+                <li><a href="#section-3">The Beginning</a></li>
+                <li><a href="#section-4">NUCK!!</a></li>
+                <li><a href="#section-5">After All These Years</a></li>
+                <li><a href="#section-6">Expanding The Family</a></li>
+            </ul>
+        </nav>
+        <div class="jumbotron">
+            <h1>Presenting to you</h1>
+            <p>Hasil Karya, DUDUCK THE PROGRAMMER</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1 -->
+        <section id="section-1" class="photo-section">
+            <h2>This is Duduck's first project. A photo album of the origin of keluarga Duduck.</h2>
+            <div class="photo-slider-container">
+                <!--<button class="prev" onclick="changeSlide(-1, 0)">&#10094;</button>-->
+                <div class="photo-slider">
+                    <div class="photo-slide">
+                        <img src="images/Duduck the Programmer.jpg" alt="Duduck the Programmer working on the first project">
+                        <p class="photo-description">Duduck belajar computer cara cara gimana coding</p>
+                    </div>
+                </div>
+                <!--<button class="next" onclick="changeSlide(1, 0)">&#10095;</button>-->
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="section-2" class="photo-section">
+            <h2>Life before Duduck</h2>
+            <div class="photo-slider-container">
+                <button class="prev" onclick="changeSlide(-1, 1)">&#10094;</button>
+                <div class="photo-slider">
+                    <div class="photo-slide">
+                        <img src="images/Finger Photo.jpg" alt="Fingers pointing together">
+                        <p class="photo-description">Nuncuk has always been the youngest sibling of Muck and Puck. Where there’s Muck, there’s Nuck.</p>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="images/Three Elephant.jpg" alt="Three elephant figurines">
+                        <p class="photo-description">Whenever they buy decorations, it’s always three of something.</p>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="images/Three mugs.jpg" alt="Three mugs on a table">
+                        <p class="photo-description">See... three again.</p>
+                    </div>
+                </div>
+                <button class="next" onclick="changeSlide(1, 1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="section-3" class="photo-section">
+            <h2>The start of Muck and Puck</h2>
+            <div class="photo-slider-container">
+                <button class="prev" onclick="changeSlide(-1, 2)">&#10094;</button>
+                <div class="photo-slider">
+                    <div class="photo-slide">
+                        <img src="images/Walking slowly towards you.jpg" alt="Person walking slowly">
+                        <p class="photo-description">Duduck is new to this world. So Duduck asked Cece to explain the origin story of Cece and Duduck.</p>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="images/BUlllyy.jpg" alt="Person forcing another to marry">
+                        <p class="photo-description">Soon, Puck started pressuring Muck to get married. “YOU WILL MARRY ME!”</p>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="images/Batam Beach.jpg" alt="A beach in Batam">
+                        <p class="photo-description">Muck and Puck started their life together.</p>
+                    </div>
+                </div>
+                <button class="next" onclick="changeSlide(1, 2)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="section-4" class="photo-section">
+            <h2>NUCK!!!</h2>
+            <div class="photo-slider-container">
+                <button class="prev" onclick="changeSlide(-1, 3)">&#10094;</button>
+                <div class="photo-slider">
+                    <div class="photo-slide">
+                        <img src="images/Batam 9yo.jpg" alt="Nuck at 9 years old">
+                        <p class="photo-description">Suddenly, Cece appeared in Muck and Puck’s life. Cece was sometimes naughty but always loved Muck and Puck.</p>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="images/Mommy Birthday.jpg" alt="Family birthday celebration">
+                        <p class="photo-description">Every year, the family celebrates birthdays together. This was before Duck came along—only Cece was there.</p>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="images/Mom's 17th Birthday.jpg" alt="Muck's 17th birthday">
+                        <p class="photo-description">This was Muck’s 17th birthday celebration because Muck is FOREVER YOUNG!</p>
+                    </div>
+                </div>
+                <button class="next" onclick="changeSlide(1, 3)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="section-5" class="photo-section">
+            <h2>After all these years</h2>
+            <div class="photo-slider-container">
+                <button class="prev" onclick="changeSlide(-1, 4)">&#10094;</button>
+                <div class="photo-slider">
+                    <div class="photo-slide">
+                        <img src="images/Habitat.jpg" alt="Muck and Puck posing">
+                        <p class="photo-description">This is the love story of Muck and Puck before Duck was born. They are still sweet after 25 years of marriage, enough to give people diabetes.</p>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="images/Youre more than Bae Yong Jun.jpg" alt="Muck glancing at a Bae Yong Jun poster">
+                        <p class="photo-description">Sometimes, Muck glances at Bae Yong Jun, but Puck remains number one in Muck’s heart.</p>
+                    </div>
+                </div>
+                <button class="next" onclick="changeSlide(1, 4)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="section-6" class="photo-section">
+            <h2>Expanding the family</h2>
+            <div class="photo-slider-container">
+                <button class="prev" onclick="changeSlide(-1, 5)">&#10094;</button>
+                <div class="photo-slider">
+                    <div class="photo-slide">
+                        <img src="images/Ada Duduck sekarang.JPG" alt="A photo of the family with Duduck">
+                        <p class="photo-description">Now, they’re not just three anymore. Duck has joined the family.</p>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="images/Bigger family now.JPG" alt="A larger family photo">
+                        <p class="photo-description">Now there’s Shishi, Shosho, and Boemboem too.</p>
+                    </div>
+                </div>
+                <button class="next" onclick="changeSlide(1, 5)">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Happy 25th Anniversary!!</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    
+</body>
+</html>

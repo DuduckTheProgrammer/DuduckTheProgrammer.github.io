@@ -1,0 +1,252 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    padding-top: 56px; /* Space for fixed navbar */
+    background-color: #1a1a1a; /* Dark background color */
+    color: #f1f1f1; /* Light text color for contrast */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar stays above other content */
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #f8c030; /* Warm yellow color for the logo */
+    font-family: 'Dancing Script', cursive;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    transition: all 0.3s ease-in-out; /* Smooth transition for showing links */
+}
+
+.navbar .nav-links li {
+    margin-left: 1rem;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.navbar .nav-links a:hover {
+    background: #555;
+    border-radius: 4px;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Jumbotron styling */
+.jumbotron {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #222; /* Darker background for jumbotron */
+}
+
+.jumbotron h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #f8c030; /* Warm yellow for header text */
+    font-family: 'Dancing Script', cursive;
+}
+
+.jumbotron p {
+    font-size: 1.2rem;
+    color: #ddd; /* Slightly lighter color for subtext */
+}
+
+/* Photo slider container styling */
+.photo-slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: 2rem auto; /* Added space around sliders */
+    overflow: hidden;
+}
+
+.photo-slider {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+}
+
+.photo-slide {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column; /* Ensure vertical layout for image and description */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.photo-slide img {
+    width: auto;
+    height: auto; /* Ensure the image retains its aspect ratio */
+    max-height: 400px; /* Limit the height to prevent oversized images */
+    object-fit: contain; /* Ensure the entire image fits without being cut off */
+    border-radius: 12px;
+    background-color: #333; /* Neutral background behind the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Photo description styling */
+.photo-description {
+    margin-top: 10px; /* Space between image and description */
+    background: linear-gradient(to bottom, rgba(255, 165, 0, 0.8), rgba(255, 140, 0, 0.8)); /* Gradient background */
+    color: #fff; /* White text color for contrast */
+    padding: 15px 20px; /* Increased padding for a better look */
+    border-radius: 12px; /* Rounded corners */
+    font-size: 1rem; /* Adjusted font size */
+    text-align: center;
+    max-width: 90%; /* Ensure it doesn't overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    line-height: 1.4; /* Improved readability */
+}
+
+/* Navigation buttons styling */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 1;
+    transition: background 0.3s ease;
+    transform: translateY(-50%);
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Section styling */
+.photo-section {
+    margin: 60px 0;
+    text-align: center;
+    padding: 1rem;
+    background-color: #1a1a1a; /* Dark background for sections */
+}
+
+.photo-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f8c030; /* Warm yellow for section headers */
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 50px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .photo-slide img {
+        max-height: 300px; /* Reduce the height for tablets */
+    }
+
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 54px;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .navbar .nav-links.show {
+        display: flex;  /* Show the menu when 'show' class is added */
+    }
+
+    .navbar .nav-links li {
+        margin: 0;
+    }
+
+    .navbar .nav-links a {
+        padding: 1rem;
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .jumbotron h1 {
+        font-size: 2rem;
+    }
+
+    .jumbotron p {
+        font-size: 1rem;
+    }
+
+    .photo-description {
+        font-size: 0.8rem; /* Smaller text for mobile */
+        padding: 10px 12px; /* Adjusted padding for very small screens */
+    }
+
+    .photo-slide img {
+        max-height: 250px; /* Further reduce the height for mobile devices */
+        border-radius: 8px;
+    }
+
+    .prev, .next {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+}
